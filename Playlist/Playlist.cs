@@ -9,25 +9,25 @@ namespace Playlist
 {
     class Playlist
     {
-        public int NumOfPlaylists(int N, int K, int L)
+        public int NumOfPlaylists(int numSongs, int timesPlayed, int length)
         {
-            int output = 0;
-            int fact = 0;
+            int answer = 0;
+            int calculate = 0;
 
-            for (int i = 0; i < N; i++)
+            for (int i = 0; i < numSongs; i++)
             {
-                while (i != K)
+                while (i != timesPlayed)
                 {
-                    fact = Factorial((N - i));
+                    calculate = Calc((numSongs - i));
                     i++;
                 }
-                output = fact * (N - K) ^ (N - i);
+                answer = calculate * (numSongs - timesPlayed) ^ (numSongs - i);
             }
 
-            return output;
+            return answer;
         }
 
-        public static int Factorial(int n)
+        public static int Calc(int n)
         {
             int result = 1;
             for (int i = 1; i <= n; i++)
