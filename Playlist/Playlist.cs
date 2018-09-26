@@ -47,7 +47,8 @@ namespace Playlist
             Console.WriteLine("Playlist quantity: ");          
             int l = Int32.Parse(Console.ReadLine());
             int toReturn = pl.NumOfPlaylists(n, k, l);
-            Trace.WriteLine(toReturn.ToString());
+            Console.WriteLine("Playlists possible:" + toReturn.ToString());
+            Console.Read();
         }
     }
 }
